@@ -51,13 +51,9 @@
 			<form action="#" method="post">
 				<h3>Sign up for our event</h3>
 				<input type="text" name="name" id="name" placeholder="Shahriyer Shuvo">
-				<label for="name"></label>
 				<input type="text" name="email" id="email" placeholder="Enter your email">
-				<label for="email"></label>
 				<input type="text" name="phone" id="phone" placeholder="Phone number">
-				<label for="phone"></label>
 				<input type="text" name="envato" id="envato" placeholder="Envato Username">
-				<label for="envato"></label>
 				<input type="submit" value="Let me in!">
 				<p>Hurry up, Limited seats availble</p>
 				<p>*we will never spam your email</p>
@@ -185,7 +181,7 @@
 				<a href="#" class="sponsor__link">
 					<img src="img/s.png" alt="Sponsor">
 				</a>
-				<a href="#" class="sponsor__link">
+				<a href="#" class="sponsor__link sponsor__link--envato">
 					<img src="img/logo-sponsor.png" alt="Sponsor">
 				</a>
 			</div>
@@ -208,20 +204,20 @@
 	</section>
 
 	<section class="contact">
-		<div class="contact__popup">
-			<div class="contact__address">
-				<img src="img/popup-img.png" alt="Contact">
-				<p>Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia</p>
-				<a href="#" class="contact__view-map btn">View Map</a>
-			</div>
-			<div class="contact__feedback">
-				<form action="#" method="post">
-					<input type="text" name="mail" id="mail" placeholder="ngeniousartist@gmail.com">
-					<label for="mail"></label>
-					<textarea name="message" id="message" cols="30" rows="9" placeholder="Type your message"></textarea>
-					<label for="message"></label>
-					<input type="submit" value="Send Message">
-				</form>
+		<div class="contact__overlay-map">
+			<div class="contact__popup">
+				<div class="contact__address">
+					<img src="img/popup-img.png" alt="Contact">
+					<p>Lorem Ipsum Avenue, 420/2 elm street, Melbourne, Sydney - 2122, Kingdom of Australia</p>
+					<a href="#" class="contact__view-map btn">View Map</a>
+				</div>
+				<div class="contact__feedback">
+					<form action="#" method="post">
+						<input type="email" name="mail" id="mail" placeholder="ngeniousartist@gmail.com">
+						<textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message"></textarea>
+						<input type="submit" value="Send Message">
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>
