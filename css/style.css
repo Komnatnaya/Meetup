@@ -33,6 +33,9 @@ img {
 	background-color: #90d23d;
 	border-radius: 15px;
 }
+.btn:hover {
+	opacity: 0.8;
+}
 .svg-spite {
 	position: absolute;
 	top: 0;
@@ -125,6 +128,9 @@ img {
 	text-decoration: none;
 	color: #ffffff;
 }
+.page-header__link-menu:hover {
+	color: #90d23d;
+}
 
 /*greeting*/
 
@@ -186,6 +192,10 @@ img {
 	color: #ffffff;
 	background-color: #90d23d;
 	border: none;
+	cursor: pointer;
+}
+.check-in input[type="submit"]:hover {
+	opacity: 0.8;
 }
 .check-in p {
 	margin: 0;
@@ -278,8 +288,7 @@ img {
 .program tr:last-child td:last-child {
 	border-bottom-right-radius: 15px;
 }
-.program td:last-child::after {
-	content: "+";
+.program__info {
 	position: absolute;
 	top: 24px;
 	right: 49px;
@@ -288,13 +297,17 @@ img {
 	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
+	text-decoration: none;
 	background-color: #ffffff;
 	border-radius: 50%;
 }
-.program tr:nth-child(2n) td:last-child::after {
+.program__info:hover {
+	opacity: 0.8;
+}
+.program tr:nth-child(2n) .program__info {
 	color: #373737;
 }
-.program tr:nth-child(2n+1) td:last-child::after {
+.program tr:nth-child(2n+1) .program__info {
 	color: #4b4d4f;
 }
 .program p {
@@ -344,8 +357,8 @@ img {
 .speakers {
 	width: 1170px;
 	min-height: 1300px;
-	padding: 158px 100px 240px 100px;
-	margin: 0 auto;
+	padding: 58px 100px 140px 100px;
+	margin: 100px auto;
 }
 .speakers__info {
 	padding-right: 398px;
@@ -371,6 +384,9 @@ img {
 	color: #ffffff;
 	background-color: #90d23d;
 	border-radius: 15px;
+}
+.speakers__item:not(.speakers__item--win):hover {
+	opacity: 0.8;
 }
 .speakers__item--win {
 	justify-content: center;
@@ -457,9 +473,8 @@ img {
 
 .past {
 	width: 1170px;
-	min-height: 1300px;
-	padding: 123px 0 92px 0;
-	margin: 0 auto;
+	padding: 63px 0 32px 0;
+	margin: 60px auto;
 	text-align: center;
 }
 .past__info {
@@ -567,7 +582,12 @@ img {
 	font-weight: normal;;
 	color: #ffffff;
 	background-color: #373737;
+	border: none;
 	border-radius: 6px;
+	cursor: pointer;
+}
+.contact__feedback input[type=submit]:hover {
+	opacity: 0.8;
 }
 
 /*page-footer*/
@@ -605,11 +625,15 @@ img {
 
 .up {
 	position: fixed;
-	bottom: 80px;
+	bottom: 92px;
 	right: 80px;
 	width: 20px;
 	height: 20px;
 	border-top: 5px solid #212121;
 	border-left: 5px solid #212121;
 	transform: rotate(45deg);
+	opacity: 0.8;
+}
+.up:hover {
+	opacity: 1;
 }
