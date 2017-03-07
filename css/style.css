@@ -57,10 +57,8 @@ img {
 .page-header {
 	position: relative;
 	width: 100%;
-	/*min-height: 769px;*/
 	color: #ffffff;
 	background-color: #4a454b;
-	/*background-image: linear-gradient(175deg, #4a454b 0%, #4a454b 75%, #ffffff 75.2%);*/
 }
 .page-header::after {
 	content: "";
@@ -73,7 +71,7 @@ img {
 .page-header__wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: flex-start;
+	align-content: flex-start;
 	padding: 45px 70px 0 70px;
 	width: 1170px;
 	min-height: 810px;
@@ -130,6 +128,34 @@ img {
 }
 .page-header__link-menu:hover {
 	color: #90d23d;
+}
+.page-header__timer {
+	width: 970px;
+	height: 196px;
+	padding: 0 50px 0 71px;
+	margin: 116px auto 0 auto;
+	font-family: "Roboto Slab", "Book Antiqua", serif;
+	color: #ffffff;
+	border: 2px solid #90d23d;
+	border-radius: 20px;
+}
+.page-header__time {
+	font-size: 130px;
+	font-weight: 100;
+	line-height: 140px;
+}
+.page-header__units {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 21px;
+	font-size: 25px;
+	font-weight: normal;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+.page-header__units span {
+	width: 134px;
+	text-align: center;
 }
 
 /*greeting*/
