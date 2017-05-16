@@ -147,7 +147,7 @@ img {
 .page-header__units {
 	display: flex;
 	justify-content: space-between;
-	padding-right: 21px;
+	padding-right: 25px;
 	font-size: 25px;
 	font-weight: normal;
 	line-height: 40px;
