@@ -401,6 +401,7 @@ img {
 	height: 972px;
 }
 .speakers__item {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -408,21 +409,14 @@ img {
 	height: 296px;
 	padding: 20px 33px;
 	color: #ffffff;
-	background-color: #90d23d;
+	background-image: url("../img/3.jpg");
 	border-radius: 15px;
-}
-.speakers__item:not(.speakers__item--win):hover {
-	opacity: 0.8;
 }
 .speakers__item--win {
 	justify-content: center;
-	background-color: inherit;
+	background: inherit;
 }
-.speakers__item--active {
-	position: relative;
-	background-image: url("../img/3.jpg");
-}
-.speakers__item--active::after {
+.speakers__item:not(.speakers__item--win)::before {
 	content: "";
 	position: absolute;
 	top: 127px;
@@ -431,13 +425,30 @@ img {
 	height: 6px;
 	background-color: #ffffff;
 }
-.speakers__item--active h3 {
+.speakers__item:not(.speakers__item--win)::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	background-color: #90d23d;
+}
+.speakers__item:hover::after {
+	background-color: #46c70b;
+}
+.speakers__items .speakers__item--active::after {
+	z-index: -1;
+}
+.speakers__item h3 {
 	margin-top: 11px;
 	margin-bottom: 26px;
 	font-size: 45px;
 	line-height: 45px;
 }
-.speakers__item--active p {
+.speakers__item p {
 	flex-grow: 1;
 	margin-top: 0;
 	font-size: 18px;
@@ -545,13 +556,19 @@ img {
 /*contact*/
 
 .contact {
+	position: relative;
 	height: 660px;
-	background: #484744 url("../img/map.jpg") no-repeat 50% 0%;
+	background: #484744 url("../img/map-hall.png") no-repeat 50% 0%;
 }
 .contact__overlay-map {
+	position: relative;
+	z-index: 5;
 	display: flex;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+.contact__overlay-map--none {
+	display: none;
 }
 .contact__popup {
 	display: flex;
@@ -615,7 +632,26 @@ img {
 .contact__feedback input[type=submit]:hover {
 	opacity: 0.8;
 }
-
+.contact__show {
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	z-index: 3;
+	margin-left: -100px;
+	display: none;
+}
+.contact__show--show {
+	display: block;
+}
+.contact__map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	height: 660px;
+	width: 100%;
+	border: none;
+}
 /*page-footer*/
 
 .page-footer {
@@ -653,6 +689,7 @@ img {
 	position: fixed;
 	bottom: 92px;
 	right: 80px;
+	z-index: 10;
 	width: 20px;
 	height: 20px;
 	border-top: 5px solid #212121;
