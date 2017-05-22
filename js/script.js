@@ -52,3 +52,21 @@ contactShow.addEventListener("click", function(event) {
   popup.classList.remove("contact__overlay-map--none");
 	contactShow.classList.remove("contact__show--show");
 });
+
+// scrollup
+
+$(document).ready(function(){
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+      $('.up, .alert').fadeIn();
+    } else {
+      $('.up, .alert').fadeOut();
+    }
+  });
+  $('.up').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 3000);
+    return false;
+  });
+});
